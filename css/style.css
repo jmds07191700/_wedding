@@ -18,3 +18,67 @@ body{
   main img{
     width:100%;
   }
+
+  .photo{
+    background-color: black;
+  }
+  /* popup */
+
+  .gallery {
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .gallery img {
+    width: 27%;
+    margin: 7px;
+    padding: 0px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    line-height: normal;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling in modal */
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    object-fit: contain; /* Ensures image stays within bounds and centered */
+  }
+  
+  body.modal-open {
+    overflow: hidden; /* Prevent body scrolling */
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .arrow.left {
+    left: 20px;
+  }
+  
+  .arrow.right {
+    right: 20px;
+  }
