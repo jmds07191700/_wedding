@@ -59,6 +59,40 @@
             <img src="img/008.svg" alt="">
         </div>
 
+        <div class="page_9 fade-in">
+            <img src="img/009.svg" alt="">
+        </div>
+
+        <div class="page_9">
+            <img src="img/009-2.svg" alt="">
+        </div>
+
+        <div class="photo">
+
+        <div class="gallery">
+            <img src="img/with_1.jpeg" alt="Sample Image 1">
+            <img src="img/with_2.jpeg" alt="Sample Image 2">
+            <img src="img/with_3.jpeg" alt="Sample Image 3">
+            <img src="img/with_4.jpeg" alt="Sample Image 4">
+            <img src="img/with_5.jpeg" alt="Sample Image 5">
+            <img src="img/with_6.jpeg" alt="Sample Image 6">
+            <img src="img/with_7.jpeg" alt="Sample Image 7">
+            <img src="img/with_8.jpeg" alt="Sample Image 2">
+            <img src="img/with_9.jpeg" alt="Sample Image 3">
+            <img src="img/with_10.jpeg" alt="Sample Image 1">
+            <img src="img/with_11.jpeg" alt="Sample Image 2">
+            <img src="img/with_12.jpeg" alt="Sample Image 3">
+          </div>    
+
+
+            <div class="modal" id="photoModal">
+                <span class="arrow left" id="prevArrow">&#8592;</span>
+                <img id="modalImage" src="" alt="Modal Image">
+                <span class="arrow right" id="nextArrow">&#8594;</span>
+            </div>
+
+        </div>
+
     </main>
     
 </body>
@@ -97,5 +131,88 @@ navigator.clipboard.writeText(text).then(() => {
   alert(`Copied to clipboard: ${text}`);
 });
 };
+
+// popUp
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('photoModal');
+    const modalImage = document.getElementById('modalImage');
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const prevArrow = document.getElementById('prevArrow');
+    const nextArrow = document.getElementById('nextArrow');
+
+    let currentIndex = 0;
+    let startX = 0;
+    let endX = 0;
+
+    const openModal = (imageSrc) => {
+      modalImage.src = imageSrc;
+      modal.style.display = 'flex';
+      document.body.classList.add('modal-open'); // Prevent body scrolling
+    };
+
+    const closeModal = () => {
+      modal.style.display = 'none';
+      modalImage.src = '';
+      document.body.classList.remove('modal-open'); // Re-enable body scrolling
+    };
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+      
+
+    const showNextImage = () => {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      modalImage.src = galleryImages[currentIndex].src;
+    };
+
+    const showPrevImage = () => {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      modalImage.src = galleryImages[currentIndex].src;
+    };
+
+    const handleSwipe = () => {
+      const diffX = startX - endX;
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          showNextImage();
+        } else {
+          showPrevImage();
+        }
+      }
+    };
+
+    galleryImages.forEach((image,index) => {
+      image.addEventListener('click', () => openModal(index));
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    nextArrow.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showNextImage();
+    });
+
+    prevArrow.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPrevImage();
+    });
+
+    modal.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    modal.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      handleSwipe();
+    });
+})
+
 </script>
 </html>
