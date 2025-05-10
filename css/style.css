@@ -1,7 +1,14 @@
 body{
-    background: #fff;
     margin:0 auto;
     padding: 0;
+}
+
+div{padding:0;margin:0}
+
+.white{background-color: white;}
+.black{
+  background-color: black;
+  margin-top: -1px;
 }
 
 .fade-in {
@@ -17,10 +24,6 @@ body{
 
   main img{
     width:100%;
-  }
-
-  .photo{
-    background-color: black;
   }
   /* popup */
 
@@ -82,3 +85,5 @@ body{
   .arrow.right {
     right: 20px;
   }
+
+  
