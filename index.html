@@ -144,6 +144,19 @@
 
             <div class="page_16 fade-in">
                 <img src="img/016.svg" alt="">
+                <div class="contact">
+                    <p class="bold">Bride</p>
+                <p>박정민 (신한 : 1212123121)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
+                <p>박성찬 (카카오뱅크 :333245235245)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
+                </div>
+
+                <div class="contact">
+                    <p class="bold">Groom</p>
+                <p>한덕수 (신한 : 1212123121)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
+                <p>한석근 (카카오뱅크 :333245235245)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
+                </div>
+                <br><br><br><br><br>
+                
             </div>
 
         </div>
@@ -172,7 +185,6 @@
 <script>
 
     //   fade-in
-
 const fadeElements = document.querySelectorAll('.fade-in');
 
 const handleScroll = () => {
@@ -193,6 +205,9 @@ navigator.clipboard.writeText(text).then(() => {
   alert(`Copied to clipboard: ${text}`);
 });
 };
+</script>
+
+<script>
 
 // popUp
 document.addEventListener('DOMContentLoaded', () => {
