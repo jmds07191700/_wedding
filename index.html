@@ -16,6 +16,18 @@
 <body>
 
      <div class="white">
+
+        <audio id="bgm" loop>
+            <source src="antifreeze.mp3" type="audio/mp3">
+            브라우저가 오디오를 지원하지 않습니다.
+          </audio>
+          <br>
+        
+          <!-- 우측 상단 재생/일시정지 버튼 -->
+        <audio id="bgm" loop>
+          <source src="" type="audio/mp3">
+        </audio>
+        <button id="bgmToggle" onclick="toggleBgm()" aria-label="배경음악 토글">on</button>
             
         <header>
             <img src="https://jmds07191700.github.io/_wedding/img/001.svg" alt="">
@@ -333,6 +345,30 @@ function closePopup() {
         toast.classList.remove("show");
       }, 2000);
     }
+
+    const bgm = document.getElementById("bgm");
+  const toggleBtn = document.getElementById("bgmToggle");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    bgm.volume = 0.7;
+    const playPromise = bgm.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        toggleBtn.textContent = "off"; // 자동재생 차단 시
+      });
+    }
+  });
+
+  function toggleBgm() {
+    if (bgm.paused) {
+      bgm.play();
+      toggleBtn.textContent = "on";
+    } else {
+      bgm.pause();
+      toggleBtn.textContent = "off";
+    }
+  }
+
 
 </script>
 </html>
