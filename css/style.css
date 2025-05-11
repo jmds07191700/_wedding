@@ -165,4 +165,27 @@ div{padding:0;margin:0}
     font-family: 'nanummyeongjo';
   }
 
+  /* bgm */
+  #bgmToggle {
+    position: fixed;
+    font-family: "nanummyeongjo";
+    top: 20px;
+    right: 20px;
+    background: none; /* 완전 투명 */
+    border: none;
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 9999;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  
+  #bgmToggle:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+
   
