@@ -15,7 +15,6 @@
 </head>
 <body>
 
-    <main>
      <div class="white">
             
         <header>
@@ -84,45 +83,47 @@
         <div class="page_11 white fade-in">
             <img src="img/011.svg" alt="">
         </div>
+    </div>
 
-        <div class="page_12 fade-in">
-            <img src="img/012.svg" alt="">
-            <div class="gallery">
-                <img src="img/IMG_0046-1.jpg" alt="1">               
-                <img src="img/IMG_0328-1.jpg" alt="2">
-                <img src="img/IMG_0384.jpg" alt="3">
-                <img src="img/IMG_0428-1.jpg" alt="4">
-                <img src="img/IMG_0778-1.jpg" alt="5">
-                <img src="img/IMG_1257-1.jpg" alt="6">
-                <img src="img/IMG_1428.jpg" alt="7">
-                <img src="img/IMG_1544.jpg" alt="8">
-                <img src="img/IMG_1572-1.jpg" alt="9">
-                <img src="img/IMG_1658-1.jpg" alt="10">
-                <img src="img/IMG_1998-1-1.jpg" alt="11">
-                <img src="img/IMG_2100-1.jpg" alt="12">
-                <img src="img/IMG_2395-1.jpg" alt="13">
-                <img src="img/IMG_2545-1.jpg" alt="14">
-                <img src="img/IMG_2759-1-1.jpg" alt="15">
-                <img src="img/IMG_2848-1-1.jpg" alt="16">
-                <img src="img/IMG_2917-1.jpg" alt="17">
-                <img src="img/IMG_3097-1-1.jpg" alt="18">
-                <img src="img/IMG_3213.jpg" alt="19">
-                <img src="img/IMG_3298-1-1.jpg" alt="20">
-                <img src="img/IMG_3489-1.jpg" alt="21">
-                <img src="img/IMG_3865-1.jpg" alt="22">
-                <img src="img/IMG_3909.jpg" alt="23">
-                <img src="img/IMG_4248-1.jpg" alt="24">
-                <img src="img/IMG_4410-1.jpg" alt="25">
-                <img src="img/IMG_4472-1.jpg" alt="26">
-                <img src="img/" alt="10">
-              </div>    
-    
-    
-                <div class="modal" id="photoModal">
-                    <span class="arrow left" id="prevArrow">&#8592;</span>
-                    <img id="modalImage" src="" alt="Modal Image">
-                    <span class="arrow right" id="nextArrow">&#8594;</span>
-                </div>
+    <div class="page_12 black fade-in">
+        <img src="img/012.svg" alt="">
+        <div class="gallery" id="gallery">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_0046-1.jpg" alt="1">               
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_0328-1.jpg" alt="2">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_0384.jpg" alt="3">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_0428-1.jpg" alt="4">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_0778-1.jpg" alt="5">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_1257-1.jpg" alt="6">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_1428.jpg" alt="7">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_1544.jpg" alt="8">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_1572-1.jpg" alt="9">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_1658-1.jpg" alt="10">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_1998-1-1.jpg" alt="11">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_2100-1.jpg" alt="12">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_2395-1.jpg" alt="13">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_2545-1.jpg" alt="14">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_2759-1-1.jpg" alt="15">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_2848-1-1.jpg" alt="16">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_2917-1.jpg" alt="17">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_3097-1-1.jpg" alt="18">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_3213.jpg" alt="19">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_3298-1-1.jpg" alt="20">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_3489-1.jpg" alt="21">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_3865-1.jpg" alt="22">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_3909.jpg" alt="23">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_4248-1.jpg" alt="24">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_4410-1.jpg" alt="25">
+            <img src="https://jmds07191700.github.io/_wedding/img/IMG_4472-1.jpg" alt="26">
+            <img src="img/" alt="27">
+            <br><br><br><br>
+            </div>    
+        </div>
+
+            <!-- 팝업 -->
+        <div class="popup" id="popup" onclick="handleOutsideClick(event)">
+            <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+            <img id="popupImage" src="" alt="팝업 이미지">
+            <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
         </div>
 
         <div class="white">
@@ -145,15 +146,50 @@
             <div class="page_16 fade-in">
                 <img src="img/016.svg" alt="">
                 <div class="contact">
-                    <p class="bold">Bride</p>
-                <p>박정민 (신한 : 1212123121)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
-                <p>박성찬 (카카오뱅크 :333245235245)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
-                </div>
+                    <!-- ✅ 신랑 계좌 -->
+                    <div class="account-box">
+                        <span class="account-label">신랑</span>
+                        <span id="groomAccount" class="account-number">우리 1002-123-456789</span>
+                        <button onclick="copyAccount('groomAccount')" class="copy-button">복사</button>
+                    </div>
 
-                <div class="contact">
-                    <p class="bold">Groom</p>
-                <p>한덕수 (신한 : 1212123121)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
-                <p>한석근 (카카오뱅크 :333245235245)<button onclick="copyToClipboard('110538553752')">복사하기</button></p>
+                    <!-- ✅ 신랑 부모님 계좌 -->
+                    <div class="account-box">
+                        <span class="account-label">신랑 아버지</span>
+                        <span id="groomFather" class="account-number">하나은행 111-222-333444</span>
+                        <button onclick="copyAccount('groomFather')" class="copy-button">복사</button>
+                    </div>
+
+                    <div class="account-box">
+                        <span class="account-label">신랑 어머니</span>
+                        <span id="groomMother" class="account-number">신한은행 555-666-777888</span>
+                        <button onclick="copyAccount('groomMother')" class="copy-button">복사</button>
+                    </div>
+                    <br><br><br>
+
+                    <!-- ✅ 신부 계좌 -->
+                    <div class="account-box">
+                        <span class="account-label">신부</span>
+                        <span id="brideAccount" class="account-number">국민은행 012-345-678901</span>
+                        <button onclick="copyAccount('brideAccount')" class="copy-button">복사</button>
+                    </div>
+
+                    <!-- ✅ 신부 부모님 계좌 -->
+                    <div class="account-box">
+                        <span class="account-label">신부 아버지</span>
+                        <span id="brideFather" class="account-number">농협 999-000-111222</span>
+                        <button onclick="copyAccount('brideFather')" class="copy-button">복사</button>
+                    </div>
+
+                    <div class="account-box">
+                        <span class="account-label">신부 어머니</span>
+                        <span id="brideMother" class="account-number">카카오뱅크 1234-5678-9012</span>
+                        <button onclick="copyAccount('brideMother')" class="copy-button">복사</button>
+                    </div>
+
+                    <!-- ✅ Toast 알림 -->
+                    <div id="toast" class="toast">계좌번호가 복사되었습니다</div>
+
                 </div>
                 <br><br><br><br><br>
                 
@@ -167,9 +203,6 @@
 
        
 
-
-    </main>
-    
 </body>
 
 <script>
@@ -208,88 +241,97 @@ navigator.clipboard.writeText(text).then(() => {
 </script>
 
 <script>
+    const popup = document.getElementById("popup");
+    const popupImage = document.getElementById("popupImage");
+    const gallery = document.getElementById("gallery");
+    const thumbnails = gallery.querySelectorAll("img");
 
-// popUp
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('photoModal');
-    const modalImage = document.getElementById('modalImage');
-    const galleryImages = document.querySelectorAll('.gallery img');
-    const prevArrow = document.getElementById('prevArrow');
-    const nextArrow = document.getElementById('nextArrow');
-
+    // 이미지 주소 자동 수집
+    const images = Array.from(thumbnails).map(img => img.src);
     let currentIndex = 0;
-    let startX = 0;
-    let endX = 0;
 
-    const openModal = (imageSrc) => {
-      modalImage.src = imageSrc;
-      modal.style.display = 'flex';
-      document.body.classList.add('modal-open'); // Prevent body scrolling
-    };
-
-    const closeModal = () => {
-      modal.style.display = 'none';
-      modalImage.src = '';
-      document.body.classList.remove('modal-open'); // Re-enable body scrolling
-    };
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-      
-
-    const showNextImage = () => {
-      currentIndex = (currentIndex + 1) % galleryImages.length;
-      modalImage.src = galleryImages[currentIndex].src;
-    };
-
-    const showPrevImage = () => {
-      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-      modalImage.src = galleryImages[currentIndex].src;
-    };
-
-    const handleSwipe = () => {
-      const diffX = startX - endX;
-      if (Math.abs(diffX) > 50) {
-        if (diffX > 0) {
-          showNextImage();
-        } else {
-          showPrevImage();
-        }
-      }
-    };
-
-    galleryImages.forEach((image,index) => {
-      image.addEventListener('click', () => openModal(index));
+    // 썸네일 클릭 이벤트 연결
+    thumbnails.forEach((img, index) => {
+      img.addEventListener("click", () => openPopup(index));
     });
 
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
+    function openPopup(index) {
+      currentIndex = index;
+      popupImage.src = images[currentIndex];
+      popup.style.display = "flex";
+      popup.classList.remove("fadeOut");
+      popup.classList.add("fadeIn");
+    }
 
-    nextArrow.addEventListener('click', (e) => {
+    function closePopup() {
+      popup.classList.remove("fadeIn");
+      popup.classList.add("fadeOut");
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 300);
+    }
+
+    function prevImage(e) {
       e.stopPropagation();
-      showNextImage();
-    });
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      popupImage.src = images[currentIndex];
+    }
 
-    prevArrow.addEventListener('click', (e) => {
+    function nextImage(e) {
       e.stopPropagation();
-      showPrevImage();
-    });
+      currentIndex = (currentIndex + 1) % images.length;
+      popupImage.src = images[currentIndex];
+    }
 
-    modal.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-    });
+    function handleOutsideClick(event) {
+      if (event.target === popup) {
+        closePopup();
+      }
+    }
+    
 
-    modal.addEventListener('touchend', (e) => {
-      endX = e.changedTouches[0].clientX;
-      handleSwipe();
-    });
-})
+function openPopup(index) {
+  currentIndex = index;
+  popupImage.src = images[currentIndex];
+  popup.style.display = "flex";
+  popup.classList.remove("fadeOut");
+  popup.classList.add("fadeIn");
+  document.body.classList.add("noscroll"); // ✅ 스크롤 막기
+}
+
+function closePopup() {
+  popup.classList.remove("fadeIn");
+  popup.classList.add("fadeOut");
+  setTimeout(() => {
+    popup.style.display = "none";
+    document.body.classList.remove("noscroll"); // ✅ 스크롤 복원
+  }, 300);
+}   
+</script>
+ <script>
+
+
+
+    function copyAccount(elementId) {
+      const accountText = document.getElementById(elementId).innerText;
+
+      navigator.clipboard.writeText(accountText).then(() => {
+        showToast("계좌번호가 복사되었습니다");
+      }).catch(err => {
+        showToast("복사에 실패했습니다 😢");
+        console.error('복사 실패:', err);
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.innerText = message;
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2000);
+    }
 
 </script>
 </html>
