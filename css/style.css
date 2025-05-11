@@ -126,6 +126,10 @@ div{padding:0;margin:0}
     font-size: 14px;
     font-weight: bold;
   }
+.account-number{
+    font-family: 'nanummyeongjo';
+}
+
 
   .contact button{
     font-family: 'nanummyeongjo';
@@ -133,6 +137,9 @@ div{padding:0;margin:0}
     background-color: white;
     color:gray;
   }
+.copy-button{
+    font-family: 'nanummyeongjo';
+}
 
 
     /* 토스트 알림창 */
