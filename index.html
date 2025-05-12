@@ -337,8 +337,9 @@ function closePopup() {
 
     function copyAccount(elementId) {
       const accountText = document.getElementById(elementId).innerText;
+      const cleanAccountNumber = accountText.replace(/[^0-9]/g, '');
 
-      navigator.clipboard.writeText(accountText).then(() => {
+      navigator.clipboard.writeText(cleanAccountNumber).then(() => {
         showToast("계좌번호가 복사되었습니다");
       }).catch(err => {
         showToast("복사에 실패했습니다 😢");
