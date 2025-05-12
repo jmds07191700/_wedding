@@ -121,35 +121,10 @@ div{padding:0;margin:0}
   }
 
 
-  .contact{
-    font-size: 13px;
-    text-align: center;
-    font-family: 'nanummyeongjo';
-  }
-
-  .account-label{
-    font-family: 'nanummyeongjo';
-    font-size: 14px;
-    font-weight: bold;
-  }
-.account-number{
-    font-family: 'nanummyeongjo';
-}
-
-
-  .contact button{
-    font-family: 'nanummyeongjo';
-    border:0px;
-    background-color: white;
-    color:gray;
-  }
-.copy-button{
-    font-family: 'nanummyeongjo';
-}
-
 
     /* 토스트 알림창 */
     .toast {
+      font-family: "Nanum Myeongjo", serif;
       visibility: hidden;
       min-width: 200px;
       background-color: #333;
@@ -201,5 +176,62 @@ div{padding:0;margin:0}
     color: #000;
     text-decoration: underline;
   }
+
+
+
+  /* new account */
+  
+  table {
+    width:100%;
+    padding:5px;
+    border-spacing: 0;
+  }
+  table td{padding:10px;}
+  
+  .container {
+    font-family: "Nanum Myeongjo", serif;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align:  center;
+  }
+
+  .section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+
+  .group h2, h3 {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .group h2{font-size: 15px;padding-bottom: 7px;}
+  .group h3{font-size: 14px;padding-bottom: 7px;}
+
+  .group p {
+    margin: 5px 0;
+    font-size: 11px;
+  }
+
+
+  .group {
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .group a{color:#000;text-decoration: none;}
+
+  .group a,span{font-weight: bold;}
+
+  .gray{font-weight: 400;font-size: 15px !important;display: inline;padding-right: 10px;}
+  .gray2{font-weight: 400;display: inline;padding-right: 10px;font-size: 14px !important;}
 
   
